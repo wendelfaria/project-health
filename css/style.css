@@ -48,11 +48,11 @@ html {
   #navegation ul li {
     list-style: none;
   }
-  #hero {
+  #hero #home {
     width: 100%;
     height: 65vh;
   }
-  #hero #meet-doctors {
+  #hero #home #meet-doctors {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,21 +63,67 @@ html {
     height: 100%;
     width: 100%;
   }
-  #hero #meet-doctors h2 {
+  #hero #home #meet-doctors h2 {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 100;
     color: white;
   }
-  #hero #meet-doctors h1 {
+  #hero #home #meet-doctors h1 {
     color: white;
   }
-  #hero #meet-doctors #button-meet {
+  #hero #home #meet-doctors #button-meet {
     background-color: #A1C126;
     color: white;
     border-style: none;
     font-size: 1rem;
     padding: 18px;
     border-radius: 5px;
+  }
+  #hero #about {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../assets/images/about-bg.jpg");
+    background-position: top;
+    background-size: 200%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero #about #about-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30%;
+    position: relative;
+  }
+  #hero #about #about-container .title-about {
+    font-size: 1.7rem;
+  }
+  #hero #about #about-container .title-about span {
+    background-color: lightgreen;
+    color: white;
+    border-radius: 2px;
+    font-size: 1.5rem;
+  }
+  #hero #about #about-container figure {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    line-height: 0.2;
+  }
+  #hero #about #about-container figure img {
+    width: 20%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+  }
+  #hero #about #about-container figure figcaption {
+    padding-left: 15%;
+  }
+  #hero #about #about-container figure figcaption h3 {
+    line-height: 0.2;
   }
 }/*# sourceMappingURL=style.css.map */
