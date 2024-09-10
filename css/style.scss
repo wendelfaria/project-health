@@ -2,12 +2,13 @@ $font-default: 'Poppins';
 $font-size: 0.8rem;
 $font-color: white;
 
-html{
+html, body{
     font-family: $font-default, sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 480px){
-
     #contact{
         text-align: center;
         font-size: $font-size;
@@ -16,6 +17,7 @@ html{
         height: 15vh;
         padding-bottom: 10px;
         #contact-container{
+            max-width: 100vw;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,6 +35,7 @@ html{
         }
     }
     #navegation{
+        max-width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -60,7 +63,8 @@ html{
     #hero{
         #home{
             width: 100%;
-            height: 65vh;
+            max-width: 100%;
+            height: 80vh;
             #meet-doctors{
                 display: flex;
                 flex-direction: column;
@@ -69,8 +73,10 @@ html{
                 background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url('../assets/images/slider1.jpg');
                 background-position: center;
                 background-size:150%;
-                height: 100%;
+                height: auto;
+                min-height: 100vh;
                 width: 100%;
+                max-width: 100vw;
                 h2{
                     text-transform: uppercase;
                     font-size: 0.8rem;
@@ -90,30 +96,37 @@ html{
                 }
             }
         }
-            #about{
-                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),url('../assets/images/about-bg.jpg');
-                background-position: top;
-                background-size: 200%;
-                width: 100%;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        #about{
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),url('../assets/images/about-bg.jpg');
+            background-position: top;
+            background-size: cover;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             #about-container{
+                max-width: 100vw;
                 width: 95%;
-                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding-top: 30%;
+                text-align: justify;
                 position: relative;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 10px;         
+                color: white;
+                padding: 10px;
                 .title-about{
                     font-size: 1.7rem;
+                    text-align: center;
                     span{
                         background-color: lightgreen;
-                        color: white;
                         border-radius: 2px;
                         font-size: 1.5rem;
+                        color: black;
                     }
                 }
                 figure{
@@ -121,19 +134,52 @@ html{
                     width: 100%;
                     align-items:center;
                     img{
-                        width: 20%;
+                        width: 100px;
+                        height: 100px;
                         border-radius: 50%;
                         position: absolute;
                         left: 0;
+                        padding: 0;
+                        padding-left: 10px;
+                        object-fit: cover;
                     }
                     figcaption{
                         padding-left: 15%;
                         h3{
                             line-height: 0.2;
                         }
-                    }line-height: 0.2;
+                    }
                 }
             }
+        }
+        #our-doctors{
+            .doctor{
+                figure{
+                    #doctor-1{
+                        max-width: 100%;
+                        height: 100%;
+                    }
+                    figcaption{
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        h3, p{
+                            margin: 0;
+                            padding: 10px;
+                        }
+                        p{
+                            padding-bottom: 20px;
+                        }
+                        address:first-of-type {  
+                            padding-top: 20px;
+                        }
+                        :nth-last-child(3){
+                            border-bottom: 1px solid gainsboro;
+                        }
+                    }
+                }
+            }
+           
         }
     }
 }

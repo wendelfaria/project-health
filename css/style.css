@@ -1,5 +1,7 @@
-html {
+html, body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 480px) {
@@ -12,6 +14,7 @@ html {
     padding-bottom: 10px;
   }
   #contact #contact-container {
+    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +31,7 @@ html {
     gap: 5px;
   }
   #navegation {
+    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -50,7 +54,8 @@ html {
   }
   #hero #home {
     width: 100%;
-    height: 65vh;
+    max-width: 100%;
+    height: 80vh;
   }
   #hero #home #meet-doctors {
     display: flex;
@@ -60,8 +65,10 @@ html {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../assets/images/slider1.jpg");
     background-position: center;
     background-size: 150%;
-    height: 100%;
+    height: auto;
+    min-height: 100vh;
     width: 100%;
+    max-width: 100vw;
   }
   #hero #home #meet-doctors h2 {
     text-transform: uppercase;
@@ -83,47 +90,80 @@ html {
   #hero #about {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../assets/images/about-bg.jpg");
     background-position: top;
-    background-size: 200%;
+    background-size: cover;
+    max-width: 100%;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   #hero #about #about-container {
+    max-width: 100vw;
     width: 95%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 30%;
+    text-align: justify;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
   }
   #hero #about #about-container .title-about {
     font-size: 1.7rem;
+    text-align: center;
   }
   #hero #about #about-container .title-about span {
     background-color: lightgreen;
-    color: white;
     border-radius: 2px;
     font-size: 1.5rem;
+    color: black;
   }
   #hero #about #about-container figure {
     display: flex;
     width: 100%;
     align-items: center;
-    line-height: 0.2;
   }
   #hero #about #about-container figure img {
-    width: 20%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: absolute;
     left: 0;
+    padding: 0;
+    padding-left: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #hero #about #about-container figure figcaption {
     padding-left: 15%;
   }
   #hero #about #about-container figure figcaption h3 {
     line-height: 0.2;
+  }
+  #hero #our-doctors .doctor figure #doctor-1 {
+    max-width: 100%;
+    height: 100%;
+  }
+  #hero #our-doctors .doctor figure figcaption {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  #hero #our-doctors .doctor figure figcaption h3, #hero #our-doctors .doctor figure figcaption p {
+    margin: 0;
+    padding: 10px;
+  }
+  #hero #our-doctors .doctor figure figcaption p {
+    padding-bottom: 20px;
+  }
+  #hero #our-doctors .doctor figure figcaption address:first-of-type {
+    padding-top: 20px;
+  }
+  #hero #our-doctors .doctor figure figcaption :nth-last-child(3) {
+    border-bottom: 1px solid gainsboro;
   }
 }/*# sourceMappingURL=style.css.map */
