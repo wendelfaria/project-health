@@ -72,6 +72,27 @@
                     </figure>
                 </article>
             </section>
+            <section id="appointment">
+                <h3>Make an appointment</h3>
+                <form action="/submit" id="appointment-form" method="POST">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Full name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="department">Select Department:</label>
+                    <select id="department" name="department">
+                        <option value="gehealth">General Health</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dental">Dental</option>
+                    </select>
+                    <button type="submit">Submit Button</button>
+                </form>
+            </section>
+            <section id="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.4267556216846!2d-45.894098223735575!3d-23.191113248096247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b0d51eec3bb%3A0x3b20a8bdfc367dd3!2sFREAKOUT!5e0!3m2!1spt-BR!2sbr!4v1726164782714!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
         </main>
     </body>
 </html>
